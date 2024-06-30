@@ -1,0 +1,58 @@
+GET http://localhost:5000/user
+
+###
+
+GET http://localhost:5000/user/abhiabhinav535@gmail.com
+
+###
+
+POST http://localhost:5000/user 
+Content-Type:   application/json
+
+{
+    "name":"one user",
+    "email":"testmail@email.com",
+    "image":"testmail@email.com"
+}
+
+### 
+
+GET http://localhost:5000/post
+
+
+### 
+
+POST http://localhost:5000/post 
+Content-Type:   application/json
+
+{
+    "postText":"Sample Post Msg",
+    "createdAt":"3456135423",
+    "createdBy":"666d742f713e7cd2859f5f0d",
+    "imageUrl":"sampleurl"
+}
+
+### 
+
+PUT http://localhost:5000/post/like/666da36ca471c569c9257353
+Content-Type:   application/json
+
+{
+    "userId":"666d742f713e7cd2859f5f0d",
+    "isLike" : true
+}
+
+### 
+
+POST http://localhost:5000/comment 
+Content-Type:   application/json
+
+{
+    "postId":"666da36ca471c569c9257353",
+    "commentText":"Sample Comment New Msg",
+    "createdAt":"3456135423",
+    "createdBy":"666d742f713e7cd2859f5f0d"
+}
+###
+
+DELETE  http://localhost:5000/comment/666fe52e3dc4ee5ce87847e1
