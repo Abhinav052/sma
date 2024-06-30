@@ -1,13 +1,15 @@
 import express, { json } from "express";
-require("dotenv").config();
+import dotenv from "dotenv";
+
 import { default as mongoose } from "mongoose";
 import cors from "cors";
 const app = express();
 const port = 5000; // Define your desired port
-import userRoutes from "./routes/userRoute";
-import postRoutes from "./routes/postRoute";
-import commentRoutes from "./routes/commentRoute";
+import userRoutes from "./routes/userRoute.js";
+import postRoutes from "./routes/postRoute.js";
+import commentRoutes from "./routes/commentRoute.js";
 // Middleware to parse JSON requests
+dotenv.config();
 app.use(json(), cors());
 const uri = process.env.MONGODB_URL; // Replace with your MongoDB URI and database name
 app.use("/user", userRoutes, cors());

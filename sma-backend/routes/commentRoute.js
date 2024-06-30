@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
-import Comment from "../model/Comment";
-import Post from "../model/Post";
+import Comment from "../model/Comment.js";
+import Post from "../model/Post.js";
 
 router.post("/", async (req, res) => {
   try {
